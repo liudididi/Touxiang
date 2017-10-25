@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_below="@id/xiahuaxian"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    >
+                <TextView
+                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:id="@+id/tv_data"
+                    android:textSize="10sp"
+                    android:textColor="#993366"
+                    android:text="创建日期"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:id="@+id/tv_staus"
+                    android:layout_width="100dp"
+                    android:textSize="10sp"
+                    android:textColor="#993366"
+                    android:text="订单状态"
+                    android:gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:layout_toEndOf="@+id/tv_price" />
+            <Button
+                android:id="@+id/bt_zhifu"
+                android:background="#f00"
+                android:paddingLeft="18dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:text="去支付"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                 />
+        <TextView
+            android:background="@drawable/tv_tj"
+            android:id="@+id/tv_price"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="需支付"
+            android:textColor="#993366"
+            android:textSize="10sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_data"
+            android:layout_toEndOf="@+id/tv_data" />
+    <View
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        ></View>
+    <View
+        android:id="@+id/xiahuaxian"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        ></View>
+</RelativeLayout>

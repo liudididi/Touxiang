@@ -20,7 +20,7 @@ import utils.Okhttputils;
 
 public class Loginmodel {
   public  void login(String phone, String password, final Ilogin ilogin){
-      Okhttputils.requer("http://169.254.157.227:8888/user/login?mobile="+phone+"&&password="+password, new Okhttputils.Backquer() {
+      Okhttputils.requer("http://120.27.23.105/user/login?mobile="+phone+"&&password="+password, new Okhttputils.Backquer() {
           @Override
           public void onfailure(Call call, IOException e) {
               ilogin.onfailure(call,e);
@@ -33,10 +33,12 @@ public class Loginmodel {
                   JSONObject json=new JSONObject(str);
                   String code = json.optString("code");
                   String msg = json.optString("msg");
+                  JSONObject data=json.getJSONObject("data");
+                  int uid= data.optInt("uid");
                   if(code.equals("1")){
                       ilogin.faillogin(code,msg);
                   }else if(code.equals("0")){
-                      ilogin.suesslogin(code,msg);
+                      ilogin.suesslogin(code,msg,uid);
                   }
               } catch (Exception e) {
                   e.printStackTrace();
@@ -47,7 +49,7 @@ public class Loginmodel {
 
   public  interface  Ilogin{
     void onfailure(Call call, IOException e);
-    void  suesslogin(String code,String msg);
+    void  suesslogin(String code,String msg,int uid);
     void  faillogin(String code,String msg);
   }
 

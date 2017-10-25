@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/gw_xhx"
+        android:layout_below="@+id/gw_title"
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        ></View>
+    <LinearLayout
+        android:background="#F8F8F8"
+        android:id="@+id/gw_linear1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <CheckBox
+            android:id="@+id/ck_shangjia"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/checkbox_style"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tv_shangjia"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:text="JD京东自营"
+            android:textColor="#000" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/gw_itemrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

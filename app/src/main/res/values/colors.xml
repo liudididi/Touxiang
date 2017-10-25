@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#fff</color>
+    <color name="balck">#000</color>
+    <color name="qjbg">#F3F5F7</color>
+    <color name="hui">#ccc</color>
+    <color name="red">#f00</color>
+    <color name="divider">#ffd2d2d2</color>
 </resources>
+
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    >
+<ImageView
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/index"
+    android:layout_width="190dp"
+    android:layout_height="200dp"
+    android:id="@+id/img_tu" />
+    <TextView
+        android:textColor="@color/balck"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:text="美的共空"
+        android:id="@+id/tv_title"
+        android:layout_below="@+id/img_tu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:id="@+id/tv_price"
+        android:textSize="20sp"
+        android:textColor="#f00"
+        android:text="239.00"
+        android:paddingTop="3dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/tv_ping"
+        android:text="115841条评论 97%的好评"
+        android:gravity="left"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/tv_price"
+        android:layout_alignLeft="@+id/tv_price"
+        android:layout_alignStart="@+id/tv_price" />
+    <View
+        android:layout_marginTop="26dp"
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_price"
+        android:layout_alignLeft="@+id/tv_price"
+        android:layout_alignStart="@+id/tv_price"></View>
+</RelativeLayout>

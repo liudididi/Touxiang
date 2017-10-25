@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.liu.asus.dianshang.MainActivity;
+import com.liu.asus.dianshang.MemessageActivity;
 
 import org.json.JSONObject;
 
@@ -51,7 +52,7 @@ public class Changepresent {
     protected static final int TAKE_PICTURE = 1;
     private static final int CROP_SMALL_PICTURE = 2;
     protected static Uri tempUri;
-    public  void   showChoosePicDialog(final Activity context){
+    public  void  showChoosePicDialog(final Activity context){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("设置头像");
         String[] items = { "选择本地照片", "拍照" };
@@ -62,10 +63,13 @@ public class Changepresent {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case CHOOSE_PICTURE: // 选择本地照片
-                        Intent openAlbumIntent = new Intent(
+                       /* Intent openAlbumIntent = new Intent(
                                 Intent.ACTION_GET_CONTENT);
-                        openAlbumIntent.setType("image/*");
-                        context.startActivityForResult(openAlbumIntent, CHOOSE_PICTURE);
+                        openAlbumIntent.setType("image*//*");*/
+                        Intent intent1 = new Intent(Intent.ACTION_PICK, null);
+                        intent1.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                        context.startActivityForResult(intent1, CHOOSE_PICTURE);
+                       // context.startActivityForResult(openAlbumIntent, CHOOSE_PICTURE);
                         break;
                     case TAKE_PICTURE: // 拍照
                         Intent openCameraIntent = new Intent(
@@ -81,7 +85,7 @@ public class Changepresent {
         });
         builder.create().show();
     }
-    public  void back(int requestCode, int resultCode, Intent data,MainActivity count,ImageView imgview,String phone){
+    public  void back(int requestCode, int resultCode, Intent data, MemessageActivity count, ImageView imgview, int uid){
 
         if (resultCode == RESULT_OK) { // 如果返回码是可以用的
             switch (requestCode) {
@@ -93,7 +97,7 @@ public class Changepresent {
                     break;
                 case CROP_SMALL_PICTURE:
                     if (data != null) {
-                        setImageToView(data,imgview,phone,count); // 让刚才选择裁剪得到的图片显示在界面上
+                        setImageToView(data,imgview,uid,count); // 让刚才选择裁剪得到的图片显示在界面上
                     }
                     break;
             }
@@ -104,14 +108,12 @@ public class Changepresent {
      *
      * @param uri
      */
-    protected void startPhotoZoom(Uri uri, MainActivity count) {
+    protected void startPhotoZoom(Uri uri, MemessageActivity count) {
         if (uri == null) {
             Log.i("tag", "The uri is not exist.");
         }
-        tempUri = uri;
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.setDataAndType(uri, "image/*");
-        // 设置裁剪
         intent.putExtra("crop", "true");
         // aspectX aspectY 是宽高的比例
         intent.putExtra("aspectX", 1);
@@ -122,16 +124,12 @@ public class Changepresent {
         intent.putExtra("return-data", true);
         count.startActivityForResult(intent, CROP_SMALL_PICTURE);
     }
-    protected void setImageToView(Intent data, ImageView imgview, String phone, final MainActivity count) {
+    protected void setImageToView(Intent data, ImageView imgview, int uid, final MemessageActivity count) {
         Bundle extras = data.getExtras();
         if (extras != null) {
             try {
                 Bitmap photo = extras.getParcelable("data");
                 imgview.setImageBitmap(photo);
-                if(TextUtils.isEmpty(phone)){
-                    Toast.makeText(count, "上传头像失败，号码为空！！", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 File file=new File("mnt/sdcard/icon.png");
                 if(!file.exists()){
                     try {
@@ -145,7 +143,7 @@ public class Changepresent {
                 if(file!=null) {
                     String filename = file.getName();
                     Map<String, Object> params = new HashMap<>();
-                    params.put("mobile", phone);
+                    params.put("uid", uid);
                     OkHttpClient okHttpClient = new OkHttpClient();
                     MultipartBody.Builder builder = new MultipartBody.Builder().setType(MultipartBody.FORM);
                     RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
@@ -156,7 +154,7 @@ public class Changepresent {
                             builder.addFormDataPart(valueOf(entry.getKey()), valueOf(entry.getValue()));
                         }
                     }
-                    Request request = new Request.Builder().url("http://169.254.157.227:8888/user/upload").post(builder.build()).build();
+                    Request request = new Request.Builder().url("http://120.27.23.105/file/upload").post(builder.build()).build();
                     Call call = okHttpClient.newCall(request);
                     call.enqueue(new Callback() {
                         @Override
@@ -175,7 +173,6 @@ public class Changepresent {
                                         Toast.makeText(count, msg, Toast.LENGTH_SHORT).show();
                                     }
                                 });
-
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -185,9 +182,9 @@ public class Changepresent {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-
         }
     }
+
 
 
 }

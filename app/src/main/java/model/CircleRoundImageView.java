@@ -86,10 +86,7 @@ public class CircleRoundImageView extends android.support.v7.widget.AppCompatIma
             mRadius = mWidth / 2;
             setMeasuredDimension(mWidth, mWidth);
         }
-
     }
-
-
     @Override
     protected void onDraw(Canvas canvas) {
 
@@ -158,4 +155,6 @@ public class CircleRoundImageView extends android.support.v7.widget.AppCompatIma
         drawable.draw(canvas);
         return bitmap;
     }
+
+
 }

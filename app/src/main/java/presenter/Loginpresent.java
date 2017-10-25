@@ -38,8 +38,8 @@ public  void login(String phone,String password){
             login.onfailure(call,e);
         }
         @Override
-        public void suesslogin(String code, String msg) {
-            login.successlogin(code,msg);
+        public void suesslogin(String code, String msg,int uid) {
+            login.successlogin(code,msg,uid);
             login.hindprogressbar();
         }
         @Override

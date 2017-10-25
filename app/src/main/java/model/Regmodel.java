@@ -14,7 +14,7 @@ import utils.Okhttputils;
 
 public class Regmodel{
   public  void reg(String phone, String password, final Reglogin reglogin){
-          Okhttputils.requer("http://169.254.157.227:8888/user/reg?mobile="+phone+"&&password="+password, new Okhttputils.Backquer() {
+          Okhttputils.requer("http://120.27.23.105/user/reg?mobile="+phone+"&&password="+password, new Okhttputils.Backquer() {
           @Override
           public void onfailure(Call call, IOException e) {
               reglogin.onfailure(call,e);

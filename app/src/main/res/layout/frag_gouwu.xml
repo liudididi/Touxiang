@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/gw_title"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:weightSum="9"
+    >
+    <TextView
+        android:textColor="#000"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:paddingTop="15dp"
+        android:gravity="right"
+        android:layout_height="match_parent"
+        android:text="购物车"
+        android:textSize="16sp"
+        />
+    <ImageView
+        android:layout_marginLeft="3dp"
+        android:layout_width="16dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/dingwei"
+        android:layout_height="16dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:id="@+id/linea_dingdan"
+        >
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:paddingTop="15dp"
+            android:text="我的订单"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/dingdan"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+    <View
+        android:layout_below="@+id/gw_title"
+        android:id="@+id/gw_xhx1"
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        >
+    </View>
+    <ScrollView
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_above="@+id/gw_jiesuan"
+        android:layout_below="@+id/gw_xhx1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gw_recycle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </android.support.v7.widget.RecyclerView>
+    </ScrollView>
+<TextView
+
+    android:textColor="#996699"
+    android:textSize="30sp"
+    android:visibility="visible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_tishi"
+    android:text="去商城逛逛再来吧~"
+    android:layout_marginTop="260dp"
+    android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#F1F8FF"
+        android:id="@+id/gw_jiesuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        >
+        <CheckBox
+            android:id="@+id/ck_quanxuan"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/checkbox_style"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:textColor="#000"
+            />
+        <TextView
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计:"
+            android:textColor="#000"
+            />
+        <TextView
+            android:textColor="#000"
+            android:layout_marginLeft="10sp"
+            android:text="0.00"
+            android:textSize="17sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_zong"
+            />
+        <Button
+            android:id="@+id/bt_jiesuan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#f00"
+            android:text="去结算"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

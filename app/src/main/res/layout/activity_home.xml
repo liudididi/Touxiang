@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.liu.asus.dianshang.HomeActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_main"
+        android:layout_above="@+id/linearLayout">
+    </FrameLayout>
+<LinearLayout
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:id="@+id/linearLayout"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <LinearLayout
+        android:id="@+id/m_shouye"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/img_shouye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shouye2"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/m_fenlei"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/img_fenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fenlei1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/m_faxian"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/img_faxian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faxian1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/m_gouwu"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/img_gouwu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gouwuche1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/m_wode"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/img_wode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wode1" />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

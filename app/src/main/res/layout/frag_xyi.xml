@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:orientation="vertical"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/xyi_vp"
+        >
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xyi_vp"
+        >
+   <TextView
+       android:id="@+id/xyi_titile"
+       android:maxLines="2"
+       android:ellipsize="end"
+       android:padding="6dp"
+       android:textSize="15sp"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:text="标题"
+       />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:textColor="#f00"
+                android:id="@+id/xyi_price"
+                android:text="195"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/tv_tj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="降价通知"
+                />
+        </LinearLayout>
+        <View
+            android:background="#F3F5F7"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            ></View>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

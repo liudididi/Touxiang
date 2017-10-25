@@ -17,8 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '25.0.0' // Older versions may give compile errors ||　更早的版本可能会报错
 }
-
+repositories {
+    jcenter()
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -28,4 +31,36 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     testCompile 'junit:junit:4.12'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.journeyapps:zxing-android-embedded:3.3.0'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.xhb:xbanner:1.2.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.mostafagazar:customshapeimageview:1.0.4'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.6'
+}
+
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
 }

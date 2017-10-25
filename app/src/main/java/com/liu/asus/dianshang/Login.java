@@ -13,8 +13,7 @@ public interface Login {
     void  hindprogressbar();
     void  nameError(String msg);
     void  passError(String msg);
-    void  successlogin(String code, String msg);
+    void  successlogin(String code, String msg,int uid);
     void  faillogin(String code, String msg);
     void  onfailure(Call call, IOException e);
-
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liu.asus.dianshang.Xnicheng">
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_marginLeft="16dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/fanhui"
+                android:id="@+id/tv_fanhui"
+                />
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改昵称"
+                android:textSize="23sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <EditText
+        android:hint="请输入要修改的昵称"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_nicheng" />
+<Button
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_queding"
+    android:text="确定"
+    android:layout_below="@+id/ed_nicheng"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+</RelativeLayout>

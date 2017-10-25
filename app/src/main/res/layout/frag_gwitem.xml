@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linea"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="8sp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:background="@drawable/tv_tjr"
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+             android:text="加价购"
+            />
+        <TextView
+            android:textSize="10sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购满500元，即可换购商品"
+            />
+        <TextView
+            android:textColor="@color/red"
+            android:textSize="10sp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="去凑单 >"
+            android:gravity="right"
+            android:paddingTop="15dp"
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linea"
+        >
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/checkbox_style"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gw_itemck" />
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/gw_itemck"
+            android:layout_toEndOf="@+id/gw_itemck"
+            android:padding="15dp"
+            android:id="@+id/img_tu" />
+        <TextView
+            android:id="@+id/tv_zi"
+            android:textSize="13sp"
+            android:text="你好"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/img_tu"
+            android:layout_toRightOf="@+id/img_tu"
+            android:layout_toEndOf="@+id/img_tu"
+            android:layout_marginTop="14dp" />
+        <TextView
+            android:id="@+id/tv_price"
+            android:textSize="13sp"
+            android:text="7588.00"
+            android:textColor="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/gw_itemck"
+            android:layout_toRightOf="@+id/img_tu"
+            android:layout_toEndOf="@+id/img_tu" />
+        <model.AmountView
+            android:layout_marginTop="13dp"
+            app:tvWidth="50dp"
+            app:btnWidth="36dp"
+            app:btnTextSize="14sp"
+            android:id="@+id/amount_view"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_zi"
+            android:layout_alignParentRight="true"
+          >
+        </model.AmountView>
+
+    </RelativeLayout>
+    <View
+       android:layout_alignParentBottom="true"
+        android:background="#F3F5F7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        ></View>
+</RelativeLayout>

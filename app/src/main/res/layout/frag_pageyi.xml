@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@drawable/page_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yi_img1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jdcs" />
+
+            <TextView
+                android:id="@+id/yi_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="京东超市"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/yi_img2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jdcs" />
+
+            <TextView
+                android:id="@+id/yi_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="全球购"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yi_img3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jdcs" />
+
+            <TextView
+                android:id="@+id/yi_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="服装城"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yi_img4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jdcs" />
+
+            <TextView
+                android:id="@+id/yi_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="京东生鲜"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yi_img5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jdcs"
+
+                />
+
+            <TextView
+                android:id="@+id/yi_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="京东到家"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:weightSum="5">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/yi_img6"
+                android:src="@drawable/jdcs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <TextView
+                android:id="@+id/yi_tv6"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="充值缴费"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/yi_img7"
+                android:src="@drawable/jdcs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <TextView
+                android:id="@+id/yi_tv7"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="领金豆"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/yi_img8"
+                android:src="@drawable/jdcs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <TextView
+                android:id="@+id/yi_tv8"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="领券"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/yi_img9"
+                android:src="@drawable/jdcs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <TextView
+                android:id="@+id/yi_tv9"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="惠赚钱"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/yi_img10"
+                android:src="@drawable/jdcs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <TextView
+                android:id="@+id/yi_tv10"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="PLUS会员"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
